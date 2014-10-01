@@ -3,7 +3,7 @@ set -e
 
 [ -d $BUILDDIR/make ] && rm -rf $BUILDDIR/make
 
-mkdir $BUILDDIR/make
+mkdir -p $BUILDDIR/make
 cd $BUILDDIR/make
 
 $SRCDIR/make-4.0/configure \
