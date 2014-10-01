@@ -7,7 +7,7 @@ fi
 cd $DOWNLOADDIR
 
 if test "`curl -v`"; then
-	FETCH="curl -f -L -o -C -"
+	FETCH="curl -f -L -O -C -"
 elif test "`wget -V`"; then
 	FETCH="wget -c"
 else
