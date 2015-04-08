@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export MAKE_VER=4.1
+
 if [ -z $NCPU ]; then
 	export NCPU=`nproc`
 fi

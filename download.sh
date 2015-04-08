@@ -6,7 +6,7 @@ fi
 
 cd $DOWNLOADDIR
 
-if test "`curl -v`"; then
+if test "`curl -V`"; then
 	FETCH="curl -f -L -O -C -"
 elif test "`wget -V`"; then
 	FETCH="wget -c"
@@ -16,10 +16,10 @@ else
 fi
 
 $FETCH ftp://ftp.gnu.org/gnu/gnu-keyring.gpg
-$FETCH ftp://ftp.gnu.org/gnu/make/make-4.0.tar.bz2
-$FETCH ftp://ftp.gnu.org/gnu/make/make-4.0.tar.bz2.sig
+$FETCH ftp://ftp.gnu.org/gnu/make/make-${MAKE_VER}.tar.bz2
+$FETCH ftp://ftp.gnu.org/gnu/make/make-${MAKE_VER}.tar.bz2.sig
 
-gpg --verify --keyring ./gnu-keyring.gpg make-4.0.tar.bz2.sig
+gpg --verify --keyring ./gnu-keyring.gpg make-${MAKE_VER}.tar.bz2.sig
 
 if [ $? -ne 0 ]; then
 	echo "Failed to verify GPG signature for make"

@@ -6,7 +6,7 @@ set -e
 mkdir -p $BUILDDIR/make
 cd $BUILDDIR/make
 
-$SRCDIR/make-4.0/configure \
+$SRCDIR/make-${MAKE_VER}/configure \
 	--build=$BUILDMACH --target=$TARGETMACH --host=$HOSTMACH \
 	--prefix=$INSTALLDIR --program-prefix=${PROGRAM_PREFIX}
 

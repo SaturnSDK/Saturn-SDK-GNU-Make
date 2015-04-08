@@ -8,10 +8,10 @@ fi
 
 cd $SRCDIR
 
-if [ ! -d make-4.0 ]; then
-	tar xvjpf $DOWNLOADDIR/make-4.0.tar.bz2
+if [ ! -d make-${MAKE_VER} ]; then
+	tar xvjpf $DOWNLOADDIR/make-${MAKE_VER}.tar.bz2
 	if [ $? -ne 0 ]; then
-		rm -rf $DOWNLOADDIR/make-4.0
+		rm -rf $DOWNLOADDIR/make-${MAKE_VER}
 		exit 1
 	fi
 fi
